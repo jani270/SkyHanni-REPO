@@ -5,13 +5,14 @@ on:
   - push
   - workflow_dispatch
 
+# Taken from https://github.com/NotEnoughUpdates/NotEnoughUpdates-REPO/blob/8a192615582ce2002c0ce1dccfe2883164bb033d/.github/workflows/main.yml
 jobs:
   Validatejson:
     name: Validate json
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: lint constants
         run: |
           #!/bin/bash
